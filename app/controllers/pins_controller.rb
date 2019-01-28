@@ -12,6 +12,25 @@ class PinsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: "Pin was Successfully updated! "
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @pin.destroy
+      redirect_to root_path
+    else
+      flash[:notice] = "Something is wrong "
+    end
+  end
+
   def create
     @pin = Pin.new(pin_params)
     if @pin.save
@@ -36,4 +55,4 @@ class PinsController < ApplicationController
 end
 
 
-21:00
+
