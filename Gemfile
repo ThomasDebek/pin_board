@@ -18,6 +18,7 @@ gem 'haml', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4'
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.5'
+gem 'hirb', '~>0.7.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
