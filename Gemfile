@@ -21,6 +21,8 @@ gem 'devise', '~> 4.5'
 gem 'hirb', '~>0.7.0'
 gem 'paperclip', '~> 6.0.0'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-rails'  # I must add this gem because masonry must have
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
