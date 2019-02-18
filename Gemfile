@@ -22,6 +22,7 @@ gem 'hirb', '~>0.7.0'
 gem 'paperclip', '~> 6.0.0'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'jquery-rails'  # I must add this gem because masonry must have
+gem 'acts_as_votable', '~> 0.12.0'
 
 
 group :development, :test do
