@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
 
   def index
@@ -34,11 +34,11 @@ class PinsController < ApplicationController
 
   def upvote
     @pin.upvote_by current_user
-    redirect_to root_path
+    render 'show'
   end
 
   def create
-    @pin = current_user.pins.build(pin_params)
+    @pin = current_user.p ins.build(pin_params)
     if @pin.save
       redirect_to @pin,
       notice: "Successfully created new Pin"
